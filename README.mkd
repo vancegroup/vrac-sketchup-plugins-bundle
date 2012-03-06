@@ -1,0 +1,11 @@
+# VRAC SketchUp Plugin Bundle
+
+Just an installer bundling some useful plugins from the Sketchucation forums in an MSI installer.
+
+## Included Plugins
+
+See `license.rtf`
+
+## Build Requirements
+
+- SharpDevelop, at least 4.2 beta. (includes WiX 3.5)
