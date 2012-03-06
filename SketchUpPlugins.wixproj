@@ -43,6 +43,6 @@
   </ItemGroup>
   <Import Project="$(WixToolPath)\wix.targets" />
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
-    <PreBuildEvent>"$(WixToolPath)\heat.exe" dir  "$(ProjectDir)\TT_Lib2" -cg TTLib2 -gg -scom -sreg -dr SKETCHUPPLUGINDIR -out "$(ProjectDir)/TT_Lib2.generated.wxs" -var "var.TTLIBDIR"</PreBuildEvent>
+    <PreBuildEvent>"$(WixToolPath)\heat.exe" dir  "$(ProjectDir)\TT_Lib2" -cg TTLib2 -gg -scom -sreg -sfrag -dr SKETCHUPPLUGINDIR -out "$(ProjectDir)/TT_Lib2.generated.wxs" -var "var.TTLIBDIR"</PreBuildEvent>
   </PropertyGroup>
 </Project>
