@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">
+            <Directory Id="SKETCHUPPLUGINDIR" Name="SketchUpPluginDir">
+                <Component Id="tt_cleanup" Guid="9D4D63BD-21A5-45D5-AEFE-0B8CF8B21DB9" DiskId="1">
+                    <File Id="tt_cleanup.rb" Name="tt_cleanup.rb" Source="tt_cleanup.rb" KeyPath="yes" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    <!--    <DirectoryRef Id="SKETCHUPPLUGINDIR">
+        <Directory Id="TT_Lib2" Name="TT_Lib2">
+            <Component Id="ArcRb" Guid="E178E128-56C4-4C66-AEAE-AE9E33184365" DiskId="1">
+                <File Id="arc.rb" Name="arc.rb" Source="TT_Lib2\arc.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="AttributesRb" Guid="DD8B4B63-1CFE-474A-A01E-F1FA328A2083" DiskId="1">
+                <File Id="attributes.rb" Name="attributes.rb" Source="TT_Lib2\attributes.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="BabelfishRb" Guid="E293FF6D-5EA4-4A08-96D3-7BD080F26BBC" DiskId="1">
+                <File Id="babelfish.rb" Name="babelfish.rb" Source="TT_Lib2\babelfish.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="BezierRb" Guid="BBC9574F-DD19-494B-A3E5-5CD4AC1B6CA6" DiskId="1">
+                <File Id="bezier.rb" Name="bezier.rb" Source="TT_Lib2\bezier.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="BinaryRb" Guid="63E9C8AC-ED4A-4B25-A1E6-686443AED9D5" DiskId="1">
+                <File Id="binary.rb" Name="binary.rb" Source="TT_Lib2\binary.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="BoundsRb" Guid="75D51847-374E-4768-B299-424431E1B881" DiskId="1">
+                <File Id="bounds.rb" Name="bounds.rb" Source="TT_Lib2\bounds.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="CHANGELOGTxt" Guid="1A962287-2616-4CAE-8D0F-F840212057AB" DiskId="1">
+                <File Id="CHANGELOG.txt" Name="CHANGELOG.txt" Source="TT_Lib2\CHANGELOG.txt" KeyPath="yes" />
+            </Component>
+            <Component Id="ColorRb" Guid="0325A773-AA2B-4AE4-B929-754B5A6CA663" DiskId="1">
+                <File Id="color.rb" Name="color.rb" Source="TT_Lib2\color.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="CoreRb" Guid="05163E1F-CC5D-4A71-8AA3-8FECF2D332D4" DiskId="1">
+                <File Id="core.rb" Name="core.rb" Source="TT_Lib2\core.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="CursorRb" Guid="4B0B44BE-1B05-4AE3-A74B-312A193450C9" DiskId="1">
+                <File Id="cursor.rb" Name="cursor.rb" Source="TT_Lib2\cursor.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="DebugRb" Guid="CE3F4BB4-F1CF-4D23-A947-62D86B4091EB" DiskId="1">
+                <File Id="debug.rb" Name="debug.rb" Source="TT_Lib2\debug.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="DefinitionRb" Guid="67293DF4-9670-4361-BA88-24D60D217169" DiskId="1">
+                <File Id="definition.rb" Name="definition.rb" Source="TT_Lib2\definition.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="DimensionRb" Guid="FBFC8B69-23DC-4873-8E5C-4E0E50805FA2" DiskId="1">
+                <File Id="dimension.rb" Name="dimension.rb" Source="TT_Lib2\dimension.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="EdgesRb" Guid="24640BCA-CC03-4DBC-B8B4-96907EF21C52" DiskId="1">
+                <File Id="edges.rb" Name="edges.rb" Source="TT_Lib2\edges.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="EntitiesRb" Guid="D5C51EE2-E344-4AAD-A2C8-020AE03369DB" DiskId="1">
+                <File Id="entities.rb" Name="entities.rb" Source="TT_Lib2\entities.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="FacesRb" Guid="E321D6BA-C5D4-4E73-B766-CA06C2327EB4" DiskId="1">
+                <File Id="faces.rb" Name="faces.rb" Source="TT_Lib2\faces.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Geom3dRb" Guid="A656F522-CAAD-4B25-A4CF-9C3B5F56827B" DiskId="1">
+                <File Id="geom3d.rb" Name="geom3d.rb" Source="TT_Lib2\geom3d.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Gizmo_manipulatorRb" Guid="4752912C-9149-4A86-9C9B-27D6FCF46E9F" DiskId="1">
+                <File Id="gizmo_manipulator.rb" Name="gizmo_manipulator.rb" Source="TT_Lib2\gizmo_manipulator.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="GuiRb" Guid="4DC326A1-3E17-4F72-8101-2FDDF10371C2" DiskId="1">
+                <File Id="gui.rb" Name="gui.rb" Source="TT_Lib2\gui.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="ImageRb" Guid="C291231F-C6B6-47EB-B767-F2342D744FA6" DiskId="1">
+                <File Id="image.rb" Name="image.rb" Source="TT_Lib2\image.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="InputboxRb" Guid="F5FBB413-F339-4937-8178-B1B3F71E0457" DiskId="1">
+                <File Id="inputbox.rb" Name="inputbox.rb" Source="TT_Lib2\inputbox.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="InstanceRb" Guid="3DA42DAD-8335-4F09-A340-120E1227392F" DiskId="1">
+                <File Id="instance.rb" Name="instance.rb" Source="TT_Lib2\instance.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Integrity_listDat" Guid="E48BE647-DBBA-4946-AF38-ADE51362FC6C" DiskId="1">
+                <File Id="integrity_list.dat" Name="integrity_list.dat" Source="TT_Lib2\integrity_list.dat" KeyPath="yes" />
+            </Component>
+            <Component Id="JavascriptRb" Guid="2CB106E9-E794-45E3-A10E-EAAE86047E87" DiskId="1">
+                <File Id="javascript.rb" Name="javascript.rb" Source="TT_Lib2\javascript.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="JsonRb" Guid="A3D61742-B751-4F0A-AD35-49BAD685917E" DiskId="1">
+                <File Id="json.rb" Name="json.rb" Source="TT_Lib2\json.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="LocaleRb" Guid="CAF662F9-3AF2-4D96-8B0F-87B220A0A3D6" DiskId="1">
+                <File Id="locale.rb" Name="locale.rb" Source="TT_Lib2\locale.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="MaterialsRb" Guid="891BF329-98BD-426E-ADEA-22EC78500C54" DiskId="1">
+                <File Id="materials.rb" Name="materials.rb" Source="TT_Lib2\materials.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Modal_wrapperRb" Guid="19D053F3-41E2-474B-82C8-674EC828B36F" DiskId="1">
+                <File Id="modal_wrapper.rb" Name="modal_wrapper.rb" Source="TT_Lib2\modal_wrapper.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="ModelRb" Guid="CA053D8C-878D-4C82-9651-78C7FFB95D80" DiskId="1">
+                <File Id="model.rb" Name="model.rb" Source="TT_Lib2\model.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Point3dRb" Guid="9EDDB0BB-DB21-406C-B3CA-884B9DFDA207" DiskId="1">
+                <File Id="point3d.rb" Name="point3d.rb" Source="TT_Lib2\point3d.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Point3d_exRb" Guid="78E24798-66D5-47B7-9253-D2A675AA5EFD" DiskId="1">
+                <File Id="point3d_ex.rb" Name="point3d_ex.rb" Source="TT_Lib2\point3d_ex.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="ProgressbarRb" Guid="641BAEB2-9EB6-4867-8314-F7BC3945E023" DiskId="1">
+                <File Id="progressbar.rb" Name="progressbar.rb" Source="TT_Lib2\progressbar.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="RayRb" Guid="9C60F147-EDC1-4F3B-90BF-C099A661C9D3" DiskId="1">
+                <File Id="ray.rb" Name="ray.rb" Source="TT_Lib2\ray.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="READMETxt" Guid="D5744FD1-4293-42C5-8491-B091255E9BBD" DiskId="1">
+                <File Id="README.txt" Name="README.txt" Source="TT_Lib2\README.txt" KeyPath="yes" />
+            </Component>
+            <Component Id="SelectionRb" Guid="A1CD7F65-925D-4E32-985D-401C32FDA743" DiskId="1">
+                <File Id="selection.rb" Name="selection.rb" Source="TT_Lib2\selection.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="SettingsRb" Guid="4F3E17C1-18B1-454B-90B5-8F1E28497BC6" DiskId="1">
+                <File Id="settings.rb" Name="settings.rb" Source="TT_Lib2\settings.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="SimpletaskRb" Guid="E743CD4E-4275-450D-8F7E-564D780EC906" DiskId="1">
+                <File Id="simpletask.rb" Name="simpletask.rb" Source="TT_Lib2\simpletask.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="SketchupRb" Guid="6F745573-6161-4D75-B656-B836BE0A36E9" DiskId="1">
+                <File Id="sketchup.rb" Name="sketchup.rb" Source="TT_Lib2\sketchup.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="SystemRb" Guid="2DF5DBF5-5B9C-4FA8-BAF7-93ED34A64226" DiskId="1">
+                <File Id="system.rb" Name="system.rb" Source="TT_Lib2\system.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="ToolbarwindowRb" Guid="5B05D4C0-02D2-49BC-90F8-812EE9502947" DiskId="1">
+                <File Id="toolbarwindow.rb" Name="toolbarwindow.rb" Source="TT_Lib2\toolbarwindow.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="ToolwindowRb" Guid="3621D66D-2825-4F13-8D9E-347C6FDCD6E4" DiskId="1">
+                <File Id="toolwindow.rb" Name="toolwindow.rb" Source="TT_Lib2\toolwindow.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="UvqRb" Guid="AEC79A02-AFA0-4487-BD21-1185440FE4B3" DiskId="1">
+                <File Id="uvq.rb" Name="uvq.rb" Source="TT_Lib2\uvq.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Uv_planeRb" Guid="9A6E912F-DBDC-4C9C-8164-1C1AEBB5C364" DiskId="1">
+                <File Id="uv_plane.rb" Name="uv_plane.rb" Source="TT_Lib2\uv_plane.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="VersionRb" Guid="418111EE-5625-4157-9449-2AD969CB430F" DiskId="1">
+                <File Id="version.rb" Name="version.rb" Source="TT_Lib2\version.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Webdialog_patchRb" Guid="950933A4-0F8B-4B02-BB0F-24452F32183E" DiskId="1">
+                <File Id="webdialog_patch.rb" Name="webdialog_patch.rb" Source="TT_Lib2\webdialog_patch.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="Win32Rb" Guid="F8E8A284-B2AB-42FE-B5D9-C16563485E50" DiskId="1">
+                <File Id="win32.rb" Name="win32.rb" Source="TT_Lib2\win32.rb" KeyPath="yes" />
+            </Component>
+            <Component Id="WindowRb" Guid="C3D3020D-CB5C-4CA3-9B7A-D4DE09282224" DiskId="1">
+                <File Id="window.rb" Name="window.rb" Source="TT_Lib2\window.rb" KeyPath="yes" />
+            </Component>
+            <Directory Id="cursors" Name="cursors">
+                <Component Id="DropperPng" Guid="46C23E3B-EB28-41CE-9A83-1638B0C50743" DiskId="1">
+                    <File Id="dropper.png" Name="dropper.png" Source="TT_Lib2\cursors\dropper.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Dropper_invalidPng" Guid="312680C0-C35A-4800-8941-6CC09D3AD501" DiskId="1">
+                    <File Id="dropper_invalid.png" Name="dropper_invalid.png" Source="TT_Lib2\cursors\dropper_invalid.png" KeyPath="yes" />
+                </Component>
+                <Component Id="MovePng" Guid="CD59B02F-85AE-4A8B-9011-A619528DBADE" DiskId="1">
+                    <File Id="move.png" Name="move.png" Source="TT_Lib2\cursors\move.png" KeyPath="yes" />
+                </Component>
+                <Component Id="OffsetPng" Guid="09787730-C264-4B4D-BE16-B86F3D902D1D" DiskId="1">
+                    <File Id="offset.png" Name="offset.png" Source="TT_Lib2\cursors\offset.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Offset_invalidPng" Guid="6740F4C5-4316-46D3-906E-02F16C818264" DiskId="1">
+                    <File Id="offset_invalid.png" Name="offset_invalid.png" Source="TT_Lib2\cursors\offset_invalid.png" KeyPath="yes" />
+                </Component>
+                <Component Id="RectanglePng" Guid="E77BD7F6-9212-4D02-8F6E-A3EDB12AB3AE" DiskId="1">
+                    <File Id="rectangle.png" Name="rectangle.png" Source="TT_Lib2\cursors\rectangle.png" KeyPath="yes" />
+                </Component>
+                <Component Id="RotatePng" Guid="89E088B6-E675-4CBD-B599-DBEAFD227BF9" DiskId="1">
+                    <File Id="rotate.png" Name="rotate.png" Source="TT_Lib2\cursors\rotate.png" KeyPath="yes" />
+                </Component>
+                <Component Id="ScalePng" Guid="467CA56F-AC76-4511-B70C-B39ECFD4E35F" DiskId="1">
+                    <File Id="scale.png" Name="scale.png" Source="TT_Lib2\cursors\scale.png" KeyPath="yes" />
+                </Component>
+                <Component Id="SelectPng" Guid="C3548B97-DE8F-4257-BFB9-3D99DD7AF684" DiskId="1">
+                    <File Id="select.png" Name="select.png" Source="TT_Lib2\cursors\select.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Select_addPng" Guid="F0ECCA1E-4322-4C63-BD02-2199106912FC" DiskId="1">
+                    <File Id="select_add.png" Name="select_add.png" Source="TT_Lib2\cursors\select_add.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Select_removePng" Guid="D8CA8428-7587-4BE6-BD8B-D353E36A42D2" DiskId="1">
+                    <File Id="select_remove.png" Name="select_remove.png" Source="TT_Lib2\cursors\select_remove.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Select_togglePng" Guid="510F20A9-04AF-4B23-A203-3C9978F2C6E4" DiskId="1">
+                    <File Id="select_toggle.png" Name="select_toggle.png" Source="TT_Lib2\cursors\select_toggle.png" KeyPath="yes" />
+                </Component>
+                <Component Id="VertexPng" Guid="13027892-5185-4D9E-8DD7-32E45254F211" DiskId="1">
+                    <File Id="Vertex.png" Name="Vertex.png" Source="TT_Lib2\cursors\Vertex.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Vertex_AddPng" Guid="BC5B63B5-D84D-4DED-A882-A055C411CB56" DiskId="1">
+                    <File Id="Vertex_Add.png" Name="Vertex_Add.png" Source="TT_Lib2\cursors\Vertex_Add.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Vertex_RemovePng" Guid="FA700744-BE5A-45C0-91A5-34A7C2445B96" DiskId="1">
+                    <File Id="Vertex_Remove.png" Name="Vertex_Remove.png" Source="TT_Lib2\cursors\Vertex_Remove.png" KeyPath="yes" />
+                </Component>
+                <Component Id="Vertex_TogglePng" Guid="878A0A06-6373-468E-90B8-26783F8E5E69" DiskId="1">
+                    <File Id="Vertex_Toggle.png" Name="Vertex_Toggle.png" Source="TT_Lib2\cursors\Vertex_Toggle.png" KeyPath="yes" />
+                </Component>
+            </Directory>
+            <Directory Id="libraries" Name="libraries">
+                <Directory Id="win32" Name="win32">
+                    <Component Id="Tt_api_readmeTxt" Guid="340BEA1C-10DC-4968-A114-3D4B38CA947B" DiskId="1">
+                        <File Id="tt_api_readme.txt" Name="tt_api-readme.txt" Source="TT_Lib2\libraries\win32\tt_api-readme.txt" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Tt_apiSo" Guid="18C713BA-1485-4427-82F1-0B279A165E1E" DiskId="1">
+                        <File Id="tt_api.so" Name="tt_api.so" Source="TT_Lib2\libraries\win32\tt_api.so" KeyPath="yes" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="webdialog" Name="webdialog">
+                <Component Id="WindowHtml" Guid="DA03EAB3-0D23-4D82-858C-C3998A8D3CD5" DiskId="1">
+                    <File Id="window.html" Name="window.html" Source="TT_Lib2\webdialog\window.html" KeyPath="yes" />
+                </Component>
+                <Component Id="Window_graphiteHtml" Guid="03809C9C-DFE8-4D4F-9602-3B7869B05E47" DiskId="1">
+                    <File Id="window_graphite.html" Name="window_graphite.html" Source="TT_Lib2\webdialog\window_graphite.html" KeyPath="yes" />
+                </Component>
+                <Directory Id="css" Name="css">
+                    <Component Id="InputboxCss" Guid="A40F2303-64A3-47B7-BC9A-54560A4B64C2" DiskId="1">
+                        <File Id="inputbox.css" Name="inputbox.css" Source="TT_Lib2\webdialog\css\inputbox.css" KeyPath="yes" />
+                    </Component>
+                    <Component Id="UiCss" Guid="2E00D85B-6C66-40DE-A4CF-CDEAD9DA095B" DiskId="1">
+                        <File Id="ui.css" Name="ui.css" Source="TT_Lib2\webdialog\css\ui.css" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Ui_graphiteCss" Guid="FA826312-D2DE-4FF3-8A1E-3938CF55D395" DiskId="1">
+                        <File Id="ui_graphite.css" Name="ui_graphite.css" Source="TT_Lib2\webdialog\css\ui_graphite.css" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Wnd_toolbarCss" Guid="687806F8-2110-4E41-BE2D-F2E6AA0EB14B" DiskId="1">
+                        <File Id="wnd_toolbar.css" Name="wnd_toolbar.css" Source="TT_Lib2\webdialog\css\wnd_toolbar.css" KeyPath="yes" />
+                    </Component>
+                </Directory>
+                <Directory Id="images" Name="images">
+                    <Component Id="Arrow_downPng" Guid="81AE7D1D-5713-4FF7-9C06-B295E48CE601" DiskId="1">
+                        <File Id="arrow_down.png" Name="arrow_down.png" Source="TT_Lib2\webdialog\images\arrow_down.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Arrow_upPng" Guid="F455059F-81C1-4A2F-A58F-CD46F5F1C693" DiskId="1">
+                        <File Id="arrow_up.png" Name="arrow_up.png" Source="TT_Lib2\webdialog\images\arrow_up.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Button_normalPng" Guid="0CEA2199-0523-4B1F-A171-4561C4F0EFFB" DiskId="1">
+                        <File Id="button_normal.png" Name="button_normal.png" Source="TT_Lib2\webdialog\images\button_normal.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Button_normal_hoverPng" Guid="3994535D-6A80-40F5-B303-02F82D6F48CE" DiskId="1">
+                        <File Id="button_normal_hover.png" Name="button_normal_hover.png" Source="TT_Lib2\webdialog\images\button_normal_hover.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Button_normal_pressedPng" Guid="B271CC2C-FE2A-4DCA-A163-53FF27B3DE25" DiskId="1">
+                        <File Id="button_normal_pressed.png" Name="button_normal_pressed.png" Source="TT_Lib2\webdialog\images\button_normal_pressed.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="CheckmarkPng" Guid="2B588066-CBD2-42D8-9E36-4C365EEA37FA" DiskId="1">
+                        <File Id="checkmark.png" Name="checkmark.png" Source="TT_Lib2\webdialog\images\checkmark.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Fade_light_invPng" Guid="AC036BA8-35D3-4C37-8B07-956F9029142B" DiskId="1">
+                        <File Id="fade_light_inv.png" Name="fade-light-inv.png" Source="TT_Lib2\webdialog\images\fade-light-inv.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Fade_lightPng" Guid="E6CF6A06-219D-4F6C-898E-B33EC53A6ED1" DiskId="1">
+                        <File Id="fade_light.png" Name="fade-light.png" Source="TT_Lib2\webdialog\images\fade-light.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="Fade_light_05Png" Guid="CE9E1EBC-D30F-49C9-95E7-B7267412EF1A" DiskId="1">
+                        <File Id="fade_light_05.png" Name="fade-light_05.png" Source="TT_Lib2\webdialog\images\fade-light_05.png" KeyPath="yes" />
+                    </Component>
+                    <Component Id="LockedPng" Guid="EFFD72E9-C581-41D6-95FD-6538168DAEBA" DiskId="1">
+                        <File Id="locked.png" Name="locked.png" Source="TT_Lib2\webdialog\images\locked.png" KeyPath="yes" />
+                    </Component>
+                </Directory>
+                <Directory Id="js" Name="js">
+                    <Component Id="BaseJs" Guid="81928995-1836-4198-A350-C48F903226C8" DiskId="1">
+                        <File Id="base.js" Name="base.js" Source="TT_Lib2\webdialog\js\base.js" KeyPath="yes" />
+                    </Component>
+                    <Component Id="InputboxJs" Guid="75D3ECB6-75EA-48EF-B2A8-C5001C1A689F" DiskId="1">
+                        <File Id="inputbox.js" Name="inputbox.js" Source="TT_Lib2\webdialog\js\inputbox.js" KeyPath="yes" />
+                    </Component>
+                    <Component Id="JqueryJs" Guid="3B48AEE1-2356-4FDA-83DC-5A648CCE7BC8" DiskId="1">
+                        <File Id="jquery.js" Name="jquery.js" Source="TT_Lib2\webdialog\js\jquery.js" KeyPath="yes" />
+                    </Component>
+                    <Component Id="JquerytextchangeminJs" Guid="06D1EDE2-DFE5-44C7-ADC3-9C681EBA940D" DiskId="1">
+                        <File Id="jquery.textchange.min.js" Name="jquery.textchange.min.js" Source="TT_Lib2\webdialog\js\jquery.textchange.min.js" KeyPath="yes" />
+                    </Component>
+                </Directory>
+            </Directory>
+        	</Directory>
+        </DirectoryRef>-->
+    </Fragment>
+</Wix>

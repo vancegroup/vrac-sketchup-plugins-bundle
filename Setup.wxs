@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="9251DA0A-D3F2-44A2-8FA2-BCBAFF68BC81" Name="VRAC SketchUp Plugins Bundle" Language="1033" Version="1.0.0.0" UpgradeCode="83649497-E831-4F5A-A04E-F82AE12ECE91" Manufacturer="ISU VRAC">
+        <Package Description="Installs a few useful Google SketchUp plugins." Comments="Comments" InstallerVersion="200" Compressed="yes" />
+        <Property Id="SKETCHUPINSTALLDIR">
+            <RegistrySearch Id="SketchUpInstallDir" Type="directory" Win64="no" Root="HKLM" Key="Software\Google\Google SketchUp 8\InstallLocation" />
+        </Property>
+        <Property Id="SKETCHUPPLUGINDIR">
+            <DirectorySearch Id="CheckSketchUpDirectory" Path="[SKETCHUPINSTALLDIR]" Depth="0">
+                <DirectorySearch Id="CheckSketchUpPluginsDirectory" Path="Plugins" />
+            </DirectorySearch>
+        </Property>
+		<!--
+			Source media for the installation. 
+ 			Specifies a single cab file to be embedded in the installer's .msi. 
+		-->
+        <Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high" />
+
+        <!-- Installation directory and files are defined in Files.wxs -->
+        <Directory Id="TARGETDIR" Name="SourceDir" />
+
+        <Feature Id="tt_cleanup" Title="tt_cleanup3 plugin" Description="Tool for a wide variety of geometry cleanups." Level="1">
+            <ComponentRef Id="tt_cleanup" />
+            <ComponentGroupRef Id="TTLib2" />
+        </Feature>
+		<!--
+ 			Using the Wix UI library.
+
+			WixUI_Minimal is the most basic of the WixUI stock dialog sets.
+ 			Its sole dialog combines the welcome and license-agreement 
+			dialogs and omits the feature customization dialog. 
+			WixUI_Minimal is appropriate when your product has no optional 
+			features.
+ 		-->
+<!--        <UIRef Id="WixUI_Minimal" />-->
+<!--		<WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
+    	<UIRef Id="WixUI_FeatureTree"/>
+
+        <!-- Check for admin rights -->
+        <Condition Message="Administrator rights are required to install."> 
+			Privileged 
+		</Condition>
+        <Condition Message="Could not find Google SketchUp 8 [SKETCHUPINSTALLDIR] - [SKETCHUPPLUGINDIR] , so will not install.">
+			SKETCHUPPLUGINDIR
+		</Condition>
+    </Product>
+</Wix>
