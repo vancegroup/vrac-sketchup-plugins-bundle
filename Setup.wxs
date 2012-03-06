@@ -32,9 +32,9 @@
 			WixUI_Minimal is appropriate when your product has no optional 
 			features.
  		-->
-<!--        <UIRef Id="WixUI_Minimal" />-->
-<!--		<WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
-    	<UIRef Id="WixUI_FeatureTree"/>
+        <!--        <UIRef Id="WixUI_Minimal" />-->
+        <!--		<WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
+        <UIRef Id="WixUI_FeatureTree" />
 
         <!-- Check for admin rights -->
         <Condition Message="Administrator rights are required to install."> 
