@@ -5,6 +5,7 @@
         <MajorUpgrade
             DowngradeErrorMessage="A later version of [ProductName] is already installed. Setup will now exit." />
 
+        <!-- Find where SketchUp is installed, so we install to its plugin directory -->
         <Property Id="SKETCHUPINSTALLDIR">
             <RegistrySearch Id="SketchUpInstallDir" Type="directory" Win64="no" Root="HKLM" Key="Software\Google\Google SketchUp 8\InstallLocation" />
         </Property>
@@ -13,6 +14,7 @@
                 <DirectorySearch Id="CheckSketchUpPluginsDirectory" Path="Plugins" />
             </DirectorySearch>
         </Property>
+
         <!--
             Source media for the installation.
             Specifies a single cab file to be embedded in the installer's .msi.
@@ -31,7 +33,6 @@
         <!--
             Using the Wix UI library.
         -->
-        <!--        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
         <UIRef Id="WixUI_FeatureTree" />
 
         <!-- Check for admin rights -->
