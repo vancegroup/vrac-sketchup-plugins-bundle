@@ -27,7 +27,7 @@
     <HarvestFileSuppressRootDirectory>true</HarvestFileSuppressRootDirectory>
   </PropertyGroup>
 
-  <!-- User-defined porperties, etc. -->
+  <!-- User-defined properties, etc. -->
   <PropertyGroup>
     <!-- Setting the version of this installer -->
     <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
