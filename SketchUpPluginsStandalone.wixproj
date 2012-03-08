@@ -20,6 +20,10 @@
 	<!-- Both these are needed so that our harvesting targets generate guids themselves -->
 	<HarvestAutogenerateGuids>false</HarvestAutogenerateGuids>
 	<HarvestGenerateGuidsNow>true</HarvestGenerateGuidsNow>
+
+	<!-- Other global defaults for harvesting -->
+    <HarvestDirectorySuppressCom>true</HarvestDirectorySuppressCom>
+    <HarvestDirectorySuppressRegistry>true</HarvestDirectorySuppressRegistry>
   </PropertyGroup>
 
   <!-- User-defined porperties, etc. -->
@@ -67,8 +71,6 @@
     <HarvestDirectory Include="$(ProjectDir)\$(TTLibDir)">
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
       <ComponentGroupName>TTLib2</ComponentGroupName>
-      <SuppressCom>true</SuppressCom>
-      <SuppressRegistry>true</SuppressRegistry>
       <PreprocessorVariable>var.TTLIBDIR</PreprocessorVariable>
     </HarvestDirectory>
   </ItemGroup>
