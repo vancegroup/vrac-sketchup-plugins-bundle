@@ -31,7 +31,7 @@
     <!-- Setting the version of this installer -->
     <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
     <WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
-    <TTLibDir>TT_Lib2</TTLibDir>
+    <TTLibDir>TT_Lib2-2.5.0\TT_Lib2</TTLibDir>
 	<DefineConstants>ProductVersion=$(ProductVersion);TTLIBDIR=$(TTLibDir)</DefineConstants>
   </PropertyGroup>
 
