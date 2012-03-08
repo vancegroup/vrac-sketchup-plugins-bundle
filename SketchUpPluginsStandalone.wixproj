@@ -2,11 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
     <ProjectGuid>{400B96AE-01B0-491B-9D5F-D5CFFED130EB}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Package</OutputType>
     <RootNamespace>SketchUpPlugins</RootNamespace>
     <OutputName>SketchUpPlugins</OutputName>
+
+    <OutputPath>output\</OutputPath>
+    <IntermediateOutputPath>obj\</IntermediateOutputPath>
   </PropertyGroup>
 
   <!-- Basic, relatively unexciting configuration for WiX -->
@@ -47,17 +48,6 @@
 		TTCleanupVer=$(TTCleanupVer);
 		TTCleanupDir=tt_cleanup-$(TTCleanupVer);
 	</DefineConstants>
-  </PropertyGroup>
-
-  <!-- Not sure why we need configurations for an installer builder, but this does them. -->
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-    <DefineConstants>Debug;$(DefineConstants)</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
   </PropertyGroup>
 
   <!-- Reference the WixUI extension -->
