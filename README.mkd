@@ -15,7 +15,7 @@ See `license.rtf`
 
 Adjust `SketchUpPluginsStandalone.wixproj` to update the version number, and that file and`Setup.wxs` to add/modify plugins.
 
-Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual Studio 2010 command prompt is one.
+Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual Studio 2010 command prompt is one. Your MSI will be in `output`. `obj` is a directory containing intermediate build products, and can be safely deleted once a build completes.
 
 ## Future Enhancements
 
