@@ -17,6 +17,20 @@ Adjust `SketchUpPluginsStandalone.wixproj` to update the version number, and tha
 
 Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual Studio 2010 command prompt is one. Your MSI will be in `output`. `obj` is a directory containing intermediate build products, and can be safely deleted once a build completes.
 
+## Changelog
+
+### 1.0.0.0 - 6 March 2012
+
+- First release
+- New plugins:
+	- tt_cleanup 3.1.7
+	- TT_Lib2 2.5.0
+
+### Upcoming
+
+- New plugins:
+- Updates:
+
 ## Future Enhancements
 
 Update the existing plugins.
