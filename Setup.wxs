@@ -3,7 +3,8 @@
     <Product Id="*" Name="VRAC SketchUp Plugins Bundle" Language="1033" Version="$(var.ProductVersion)" UpgradeCode="83649497-E831-4F5A-A04E-F82AE12ECE91" Manufacturer="ISU VRAC">
         <Package Description="Installs a few useful Google SketchUp plugins." Comments="Comments" InstallerVersion="200" Compressed="yes" />
         <MajorUpgrade
-            DowngradeErrorMessage="A later version of [ProductName] is already installed. Setup will now exit." />
+            DowngradeErrorMessage="A later version of [ProductName] is already installed. Setup will now exit."
+			AllowSameVersionUpgrades="yes" />
 
         <!-- Find where SketchUp is installed, so we install to its plugin directory -->
         <Property Id="SKETCHUPINSTALLDIR">
