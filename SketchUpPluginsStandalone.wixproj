@@ -32,7 +32,9 @@
   <PropertyGroup>
     <!-- Setting the version of this installer -->
     <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
-	<WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
+
+	<LicenseFile>license.rtf</LicenseFile>
+	<WixVariables>WixUILicenseRtf=$(LicenseFile)</WixVariables>
 
 	<!-- TTLib2 -->
     <TTLib2Ver>2.5.0</TTLib2Ver>
@@ -65,7 +67,7 @@
 
   <!-- License/source file -->
   <ItemGroup>
-    <None Include="license.rtf" />
+    <None Include="$(LicenseFile)" />
   </ItemGroup>
 
   <!-- directories/files to automatically harvest with Heat -->
