@@ -29,7 +29,9 @@ Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual 
 ### Upcoming
 
 - New plugins:
-- Updates:
+- Minor updates:
+	- tt_cleanup 3.1.9
+	- TT_Lib2 2.6.0
 
 ## Future Enhancements
 

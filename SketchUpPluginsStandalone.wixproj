@@ -37,11 +37,11 @@
 	<WixVariables>WixUILicenseRtf=$(LicenseFile)</WixVariables>
 
 	<!-- TTLib2 -->
-    <TTLib2Ver>2.5.0</TTLib2Ver>
+    <TTLib2Ver>2.6.0</TTLib2Ver>
     <TTLib2Dir>TT_Lib2-$(TTLib2Ver)\TT_Lib2</TTLib2Dir>
 
 	<!-- tt_cleanup -->
-	<TTCleanupVer>3.1.7</TTCleanupVer>
+	<TTCleanupVer>3.1.9</TTCleanupVer>
 
 	<DefineConstants>
 		ProductVersion=$(ProductVersion);
