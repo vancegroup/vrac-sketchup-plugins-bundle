@@ -19,7 +19,7 @@
 
 	<!-- Both these are needed so that our harvesting targets generate guids themselves -->
 	<HarvestAutogenerateGuids>false</HarvestAutogenerateGuids>
-	<HarvestDirectoryGenerateGuidsNow>true</HarvestDirectoryGenerateGuidsNow>
+	<HarvestGenerateGuidsNow>true</HarvestGenerateGuidsNow>
   </PropertyGroup>
 
   <!-- User-defined porperties, etc. -->
