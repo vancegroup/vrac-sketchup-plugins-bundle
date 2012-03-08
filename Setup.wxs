@@ -13,10 +13,10 @@
                 <DirectorySearch Id="CheckSketchUpPluginsDirectory" Path="Plugins" />
             </DirectorySearch>
         </Property>
-		<!--
-			Source media for the installation. 
- 			Specifies a single cab file to be embedded in the installer's .msi. 
-		-->
+        <!--
+            Source media for the installation.
+            Specifies a single cab file to be embedded in the installer's .msi.
+        -->
         <Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high" />
 
         <!-- Installation directory and files are defined in Files.wxs -->
@@ -26,25 +26,18 @@
             <ComponentRef Id="tt_cleanup" />
             <ComponentGroupRef Id="TTLib2" />
         </Feature>
-		<!--
- 			Using the Wix UI library.
-
-			WixUI_Minimal is the most basic of the WixUI stock dialog sets.
- 			Its sole dialog combines the welcome and license-agreement 
-			dialogs and omits the feature customization dialog. 
-			WixUI_Minimal is appropriate when your product has no optional 
-			features.
- 		-->
-        <!--        <UIRef Id="WixUI_Minimal" />-->
-        <!--		<WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
+        <!--
+            Using the Wix UI library.
+        -->
+        <!--        <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />-->
         <UIRef Id="WixUI_FeatureTree" />
 
         <!-- Check for admin rights -->
-        <Condition Message="Administrator rights are required to install."> 
-			Privileged 
-		</Condition>
+        <Condition Message="Administrator rights are required to install.">
+            Privileged
+        </Condition>
         <Condition Message="Could not find Google SketchUp 8 [SKETCHUPINSTALLDIR] - [SKETCHUPPLUGINDIR] , so will not install.">
-			SKETCHUPPLUGINDIR
-		</Condition>
+            SKETCHUPPLUGINDIR
+        </Condition>
     </Product>
 </Wix>
