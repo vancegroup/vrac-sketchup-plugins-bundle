@@ -9,3 +9,14 @@ See `license.rtf`
 ## Build Requirements
 
 - SharpDevelop, at least 4.2 beta. (includes WiX 3.5)
+
+## Future Enhancements
+
+Update the existing plugins.
+
+Additional plugins might also be added:
+
+- list here: <http://forums.sketchucation.com/viewtopic.php?f=323&t=28782>
+- list of top picks, with animated examples, here: <http://forums.sketchucation.com/viewtopic.php?f=180&t=16909>
+
+Unfortunately the Sketchucation forums require (free) registration in order to view any images or download any files.
