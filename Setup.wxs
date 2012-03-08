@@ -27,10 +27,24 @@
             <Directory Id="SKETCHUPPLUGINDIR" Name="SketchUpPluginDir" />
         </Directory>
 
-        <Feature Id="tt_cleanup" Title="tt_cleanup3 plugin" Description="Tool for a wide variety of geometry cleanups. Version $(var.TTCleanupVer), including TT_Lib2 version $(var.TTLib2Ver)" Level="1">
-            <ComponentGroupRef Id="tt_cleanup" />
-            <ComponentGroupRef Id="TTLib2" />
-        </Feature>
+		<Feature Id="thomthom" Title="Thomthom plugins" Description="Plugins by thomthom - all use/include TT_Lib2 version $(var.TTLib2Ver)." Level="1">
+			<Feature Id="tt_cleanup" Title="tt_cleanup3 plugin" Description="Tool for a wide variety of geometry cleanups. Version $(var.TTCleanupVer)." Level="1">
+				<ComponentGroupRef Id="tt_cleanup" />
+				<ComponentGroupRef Id="TTLib2" />
+			</Feature>
+			<Feature Id="tt_explodeallimages" Title="tt_explodeallimages plugin" Description="Explodes all images, optionally hiding edges and grouping. Version $(var.TTExplodeAllImagesVer)." Level="1">
+				<ComponentGroupRef Id="tt_explodeallimages" />
+				<ComponentGroupRef Id="TTLib2" />
+			</Feature>
+			<Feature Id="tt_export2dwithalpha" Title="tt_export2dwithalpha plugin" Description="Adds a menu option to export a 2D image with alpha channel transparency (normally missing from SketchUp on Windows). Version $(var.TTExport2DWithAlphaVer)." Level="1">
+				<ComponentGroupRef Id="tt_export2dwithalpha" />
+				<ComponentGroupRef Id="TTLib2" />
+			</Feature>
+			<Feature Id="tt_guidetools" Title="tt_guidetools plugin" Description="A number of tools for interacting with/creating guides and construction points. Version $(var.TTGuideToolsVer)." Level="1">
+				<ComponentGroupRef Id="tt_guidetools" />
+				<ComponentGroupRef Id="TTLib2" />
+			</Feature>
+		</Feature>
         <!--
             Using the Wix UI library.
         -->

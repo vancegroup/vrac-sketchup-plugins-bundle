@@ -29,6 +29,9 @@ Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual 
 ### Upcoming
 
 - New plugins:
+	- tt_explodeallimages 1.0.0
+	- tt_export2dwithalpha 1.0.1
+	- tt_guidetools 1.3.0
 - Minor updates:
 	- tt_cleanup 3.1.9
 	- TT_Lib2 2.6.0
