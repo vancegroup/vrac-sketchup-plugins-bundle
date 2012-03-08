@@ -24,15 +24,23 @@
 	<!-- Other global defaults for harvesting -->
     <HarvestDirectorySuppressCom>true</HarvestDirectorySuppressCom>
     <HarvestDirectorySuppressRegistry>true</HarvestDirectorySuppressRegistry>
+    <HarvestFileSuppressRootDirectory>true</HarvestFileSuppressRootDirectory>
   </PropertyGroup>
 
   <!-- User-defined porperties, etc. -->
   <PropertyGroup>
     <!-- Setting the version of this installer -->
     <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
-    <WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
-    <TTLib2Dir>TT_Lib2-2.5.0\TT_Lib2</TTLib2Dir>
-	<DefineConstants>ProductVersion=$(ProductVersion);TTLib2Dir=$(TTLib2Dir)</DefineConstants>
+	<WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
+
+	<!-- TTLib2 -->
+    <TTLib2Ver>2.5.0</TTLib2Ver>
+    <TTLib2Dir>TT_Lib2-$(TTLib2Ver)\TT_Lib2</TTLib2Dir>
+
+	<!-- tt_cleanup -->
+	<TTCleanupVer>3.1.7</TTCleanupVer>
+
+	<DefineConstants>ProductVersion=$(ProductVersion);TTLib2Dir=$(TTLib2Dir);TTLib2Ver=$(TTLib2Ver);TTCleanupVer=$(TTCleanupVer);TTCleanupDir=tt_cleanup-$(TTCleanupVer)</DefineConstants>
   </PropertyGroup>
 
   <!-- Not sure why we need configurations for an installer builder, but this does them. -->
@@ -56,7 +64,6 @@
 
   <!-- Hand-written setup files -->
   <ItemGroup>
-    <Compile Include="Files.wxs" />
     <Compile Include="Setup.wxs" />
   </ItemGroup>
 
@@ -65,7 +72,7 @@
     <None Include="license.rtf" />
   </ItemGroup>
 
-  <!-- directories to automatically harvest with Heat -->
+  <!-- directories/files to automatically harvest with Heat -->
   <ItemGroup>
 	<!-- TT_Lib2 -->
     <HarvestDirectory Include="$(ProjectDir)\$(TTLib2Dir)">
@@ -73,6 +80,12 @@
       <ComponentGroupName>TTLib2</ComponentGroupName>
       <PreprocessorVariable>var.TTLib2Dir</PreprocessorVariable>
     </HarvestDirectory>
+	<!-- TT_Lib2 -->
+    <HarvestFile Include="$(ProjectDir)\tt_cleanup-$(TTCleanupVer)\tt_cleanup.rb">
+      <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
+      <ComponentGroupName>tt_cleanup</ComponentGroupName>
+      <PreprocessorVariable>var.TTCleanupDir</PreprocessorVariable>
+    </HarvestFile>
   </ItemGroup>
 
   <Import Project="$(WixTargetsPath)" />

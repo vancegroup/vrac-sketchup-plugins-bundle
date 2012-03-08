@@ -19,11 +19,13 @@
         -->
         <Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high" />
 
-        <!-- Installation directory and files are defined in Files.wxs -->
-        <Directory Id="TARGETDIR" Name="SourceDir" />
+        <!-- Installation directory -->
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="SKETCHUPPLUGINDIR" Name="SketchUpPluginDir" />
+        </Directory>
 
-        <Feature Id="tt_cleanup" Title="tt_cleanup3 plugin" Description="Tool for a wide variety of geometry cleanups." Level="1">
-            <ComponentRef Id="tt_cleanup" />
+        <Feature Id="tt_cleanup" Title="tt_cleanup3 plugin" Description="Tool for a wide variety of geometry cleanups. Version $(var.TTCleanupVer), including TT_Lib2 version $(var.TTLib2Ver)" Level="1">
+            <ComponentGroupRef Id="tt_cleanup" />
             <ComponentGroupRef Id="TTLib2" />
         </Feature>
         <!--
