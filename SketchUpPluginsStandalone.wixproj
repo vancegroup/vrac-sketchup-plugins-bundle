@@ -31,8 +31,8 @@
     <!-- Setting the version of this installer -->
     <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
     <WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
-    <TTLibDir>TT_Lib2-2.5.0\TT_Lib2</TTLibDir>
-	<DefineConstants>ProductVersion=$(ProductVersion);TTLIBDIR=$(TTLibDir)</DefineConstants>
+    <TTLib2Dir>TT_Lib2-2.5.0\TT_Lib2</TTLib2Dir>
+	<DefineConstants>ProductVersion=$(ProductVersion);TTLib2Dir=$(TTLib2Dir)</DefineConstants>
   </PropertyGroup>
 
   <!-- Not sure why we need configurations for an installer builder, but this does them. -->
@@ -68,10 +68,10 @@
   <!-- directories to automatically harvest with Heat -->
   <ItemGroup>
 	<!-- TT_Lib2 -->
-    <HarvestDirectory Include="$(ProjectDir)\$(TTLibDir)">
+    <HarvestDirectory Include="$(ProjectDir)\$(TTLib2Dir)">
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
       <ComponentGroupName>TTLib2</ComponentGroupName>
-      <PreprocessorVariable>var.TTLIBDIR</PreprocessorVariable>
+      <PreprocessorVariable>var.TTLib2Dir</PreprocessorVariable>
     </HarvestDirectory>
   </ItemGroup>
 
