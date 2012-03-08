@@ -31,7 +31,7 @@
 	<HarvestDirectorySuppressRootDirectory>true</HarvestDirectorySuppressRootDirectory>
 	<GenerateGuidsNow>true</GenerateGuidsNow>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <WixVariables>WixUILicenseRtf=license.rtf</WixVariables>
     <TTLibDir>TT_Lib2</TTLibDir>
@@ -41,22 +41,13 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-   <!-- <DefineConstants>Debug;ProductVersion=$(ProductVersion);TTLIBDIR=$(TTLib2Location)</DefineConstants>-->
    <DefineConstants>Debug;$(DefineConstants)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
-	<DefineConstants>ProductVersion=$(ProductVersion);TTLIBDIR=$(TTLib2Location)</DefineConstants>
   </PropertyGroup>
 
-<!--
-  <PropertyGroup>
-    <WixToolPath Condition=" '$(WixToolPath)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Installer XML\3.6@InstallRoot)</WixToolPath>
-    <WixToolPath Condition=" '$(WixToolPath)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows Installer XML\3.6@InstallRoot)</WixToolPath>
-    <WixExtDir Condition=" '$(WixExtDir)' == ''">$(WixToolPath)</WixExtDir>
-  </PropertyGroup>
-  -->
   <ItemGroup>
     <WixExtension Include="WixUIExtension">
       <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
@@ -67,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Files.wxs" />
     <Compile Include="Setup.wxs" />
-    <!--<Compile Include="TT_Lib2.generated.wxs" />-->
   </ItemGroup>
   <ItemGroup>
     <None Include="license.rtf" />
