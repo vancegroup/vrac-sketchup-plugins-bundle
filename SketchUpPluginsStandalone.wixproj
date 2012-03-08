@@ -8,14 +8,14 @@
     <RootNamespace>SketchUpPlugins</RootNamespace>
     <OutputName>SketchUpPlugins</OutputName>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <!-- Setting the version of this installer -->
 	<ProductVersion Condition=" '$(ProductVersion)' == '' ">1.0.0.0</ProductVersion>
   </PropertyGroup>
-  
+
   <PropertyGroup>
-	<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath> 
+	<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
 	<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath)' != '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
 	<!--
     <WixToolPath Condition=" '$(WixToolPath)' == '' ">$(SharpDevelopBinPath)\Tools\Wix</WixToolPath>
@@ -49,6 +49,7 @@
     <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
 	<DefineConstants>ProductVersion=$(ProductVersion);TTLIBDIR=$(TTLib2Location)</DefineConstants>
   </PropertyGroup>
+
 <!--
   <PropertyGroup>
     <WixToolPath Condition=" '$(WixToolPath)' == ''">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Installer XML\3.6@InstallRoot)</WixToolPath>
@@ -82,7 +83,7 @@
       <PreprocessorVariable>var.TTLIBDIR</PreprocessorVariable>
     </HarvestDirectory>
   </ItemGroup>
-  
+
   <Import Project="$(WixTargetsPath)" />
 <!--
   <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
