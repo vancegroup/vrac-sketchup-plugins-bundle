@@ -11,6 +11,12 @@ See `license.rtf`
 - MSBuild 4.0 (included in Visual Studio 2010)
 - WiX - at least 3.5, I used the latest 3.6.
 
+## Dev notes
+
+Adjust `SketchUpPluginsStandalone.wixproj` to update the version number, and that file and`Setup.wxs` to add/modify plugins.
+
+Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual Studio 2010 command prompt is one.
+
 ## Future Enhancements
 
 Update the existing plugins.
