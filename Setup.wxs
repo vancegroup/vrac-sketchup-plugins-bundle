@@ -2,6 +2,9 @@
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
     <Product Id="9251DA0A-D3F2-44A2-8FA2-BCBAFF68BC81" Name="VRAC SketchUp Plugins Bundle" Language="1033" Version="$(var.ProductVersion)" UpgradeCode="83649497-E831-4F5A-A04E-F82AE12ECE91" Manufacturer="ISU VRAC">
         <Package Description="Installs a few useful Google SketchUp plugins." Comments="Comments" InstallerVersion="200" Compressed="yes" />
+        <MajorUpgrade
+            DowngradeErrorMessage="A later version of [ProductName] is already installed. Setup will now exit." />
+
         <Property Id="SKETCHUPINSTALLDIR">
             <RegistrySearch Id="SketchUpInstallDir" Type="directory" Win64="no" Root="HKLM" Key="Software\Google\Google SketchUp 8\InstallLocation" />
         </Property>
