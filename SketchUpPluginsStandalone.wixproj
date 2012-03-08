@@ -25,6 +25,7 @@
     <SupressIces>ICE45</SupressIces>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
 	<DefineSolutionProperties>false</DefineSolutionProperties>
+	<HarvestAutogenerateGuids>false</HarvestAutogenerateGuids>
 	<HarvestDirectoryGenerateGuidsNow>true</HarvestDirectoryGenerateGuidsNow>
 	<HarvestDirectorySuppressFragments>true</HarvestDirectorySuppressFragments>
 	<HarvestDirectorySuppressRegistry>true</HarvestDirectorySuppressRegistry>
