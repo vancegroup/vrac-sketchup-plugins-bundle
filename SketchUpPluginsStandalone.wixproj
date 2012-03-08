@@ -56,13 +56,18 @@
     </WixExtension>
   </ItemGroup>
 
+  <!-- Hand-written setup files -->
   <ItemGroup>
     <Compile Include="Files.wxs" />
     <Compile Include="Setup.wxs" />
   </ItemGroup>
+
+  <!-- License/source file -->
   <ItemGroup>
     <None Include="license.rtf" />
   </ItemGroup>
+
+  <!-- directories to automatically harvest with Heat -->
   <ItemGroup>
     <HarvestDirectory Include="$(ProjectDir)\$(TTLibDir)">
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
