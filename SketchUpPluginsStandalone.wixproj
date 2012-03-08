@@ -40,7 +40,13 @@
 	<!-- tt_cleanup -->
 	<TTCleanupVer>3.1.7</TTCleanupVer>
 
-	<DefineConstants>ProductVersion=$(ProductVersion);TTLib2Dir=$(TTLib2Dir);TTLib2Ver=$(TTLib2Ver);TTCleanupVer=$(TTCleanupVer);TTCleanupDir=tt_cleanup-$(TTCleanupVer)</DefineConstants>
+	<DefineConstants>
+		ProductVersion=$(ProductVersion);
+		TTLib2Dir=$(TTLib2Dir);
+		TTLib2Ver=$(TTLib2Ver);
+		TTCleanupVer=$(TTCleanupVer);
+		TTCleanupDir=tt_cleanup-$(TTCleanupVer);
+	</DefineConstants>
   </PropertyGroup>
 
   <!-- Not sure why we need configurations for an installer builder, but this does them. -->
