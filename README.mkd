@@ -8,7 +8,8 @@ See `license.rtf`
 
 ## Build Requirements
 
-- SharpDevelop, at least 4.2 beta. (includes WiX 3.5)
+- MSBuild 4.0 (included in Visual Studio 2010)
+- WiX - at least 3.5, I used the latest 3.6.
 
 ## Future Enhancements
 
