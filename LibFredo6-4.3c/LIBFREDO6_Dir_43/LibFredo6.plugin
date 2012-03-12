@@ -1,0 +1,28 @@
+# Plugin Registration
+# Reserved to the Plugin Developer
+# Copyright © 2008-2012 Fredo6 - Designed and written by Fredo6
+
+VERSION = 4.3c
+DATE = 31 Jan 12
+COPYRIGHT = "\© 2008-2012"
+
+CREDITS = Edson and Regis: for helping me adapting web dialogs to Mac platform
+CREDITS = Jeff Hammond and Takeshi:for help on debugging on Mac platform 
+CREDITS = driven: for his patience in helping me troubleshooting some problems with Safari 5.1
+CREDITS = Translation: Spanish (Gaonirico, Defisto, Pichuneke), Italian (COSEDIMARCO), German (Tom2, eichenherz)
+CREDITS = Translation: Japanese (Takeshi H.), Korean (Couque D`asse)
+
+NAME = LibFredo6 
+DESCRIPTION = Common Ruby Library for Fredo6 Plugins
+DESCRIPTION = |FR| Librairie Ruby commune aux plugins de Fredo6
+CREATOR = Fredo6
+DONATION = Fredo6 at Paypal
+MODULES = Traductor
+MODULES = G6
+RUBY_FILES = Lib6*
+WEB_SITE_NAME = Sketchucation
+WEB_SITE_LINK = http://forums.sketchucation.com/viewforum.php?f=180
+WEB_SUPPORT_LINK = http://forums.sketchucation.com/viewtopic.php?f=180&t=17947#p144178
+
+UPD_WEBSITE = Sketchucation Forum
+UPD_URL = http://forums.sketchucation.com/viewtopic.php?f=180&t=3263

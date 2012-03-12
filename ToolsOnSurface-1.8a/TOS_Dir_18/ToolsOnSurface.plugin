@@ -1,0 +1,39 @@
+# Plugin Registration
+# Reserved to the Plugin Developer
+
+VERSION = 1.8a
+DATE = 12 Jan 11
+DATE = |FR| 12 Jan 11
+COPYRIGHT = "© 2008 - 2011"
+COPYRIGHT = "|FR| © 2008 - 2011"
+LIBFREDO6 = 36
+SKETCHUP_VERSION = 5.0.160
+
+CREDITS = "CadFather : for alternate icons and cursors"
+CREDITS = "Daniel S. : for alternate icons and cursors"
+CREDITS = "Takeshi : for help troubleshooting v1.5 on Mac platforms"
+CREDITS = "Defisto : for new version of Spanish translation"
+
+NAME = Tools on Surface 
+NAME = |FR| Outils sur Surface 
+DESCRIPTION = Suite of tools to draw on surface
+DESCRIPTION = |FR| Suite d'outils de dessin sur surface
+CREATOR = Fredo6
+MODULES = SUToolsOnSurface
+EXT_LOAD = true
+ICON_CONV = TOS_icon_
+CURSOR_CONV = TOS_cursor_
+TOOLBAR = Tools on Surface
+
+WEB_SITE_NAME = Sketchucation
+WEB_SITE_LINK = http://forums.sketchucation.com/viewforum.php?f=180
+WEB_SUPPORT_LINK = http://forums.sketchucation.com/viewtopic.php?f=180&t=11212#p76625
+VIDEO = Freehand overview ; http://www.youtube.com/watch?v=mdqsYAbUfTE
+VIDEO = Without Surface ; http://www.youtube.com/watch?v=iYl2_inxxcg
+DONATION = Fredo6 at Paypal; file://ToolsOnSurface_donation.html
+
+OLD_FILE = OnSurface.rb , OffsetOnSurface.rb ; LineOnSurface.rb 
+OLD_FILE = PolylineOnSurface.rb ; EraserOnSurface.rb , PolygonOnSurface.rb
+OLD_DIR = TOS_Dir ; OFS_Dir
+
+RUBY_FILES = *OnSurface
