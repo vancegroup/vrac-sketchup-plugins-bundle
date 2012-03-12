@@ -32,6 +32,9 @@ Run `buildmsi.cmd` in a terminal that `msbuild` is accessible from. Your Visual 
 	- tt_explodeallimages 1.0.0
 	- tt_export2dwithalpha 1.0.1
 	- tt_guidetools 1.3.0
+	- JointPushPull 2.0b
+	- ToolsOnSurface 1.8a
+	- LibFredo6 4.3c
 - Minor updates:
 	- tt_cleanup 3.1.9
 	- TT_Lib2 2.6.0

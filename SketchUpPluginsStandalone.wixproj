@@ -46,6 +46,10 @@
 	<TTExport2DWithAlphaVer>1.0.1</TTExport2DWithAlphaVer>
 	<TTGuideToolsVer>1.3.0</TTGuideToolsVer>
 
+	<JointPushPullVer>2.0b</JointPushPullVer>
+	<ToolsOnSurfaceVer>1.8a</ToolsOnSurfaceVer>
+	<LibFredo6Ver>4.3c</LibFredo6Ver>
+
 	<DefineConstants>
 		ProductVersion=$(ProductVersion);
 		TTLib2Dir=$(TTLib2Dir);
@@ -62,6 +66,13 @@
 
 		TTGuideToolsVer=$(TTGuideToolsVer);
 		TTGuideToolsDir=tt_guidetools-$(TTGuideToolsVer);
+
+		JointPushPullVer=$(JointPushPullVer);
+		JointPushPullDir=JointPushPull-$(JointPushPullVer);
+		ToolsOnSurfaceVer=$(ToolsOnSurfaceVer);
+		ToolsOnSurfaceDir=ToolsOnSurface-$(ToolsOnSurfaceVer);
+		LibFredo6Ver=$(LibFredo6Ver);
+		LibFredo6Dir=LibFredo6-$(LibFredo6Ver);
 	</DefineConstants>
   </PropertyGroup>
 
@@ -85,13 +96,12 @@
 
   <!-- directories/files to automatically harvest with Heat -->
   <ItemGroup>
-	<!-- TT_Lib2 -->
+	<!-- thomthom plugins -->
     <HarvestDirectory Include="$(ProjectDir)\$(TTLib2Dir)">
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
       <ComponentGroupName>TTLib2</ComponentGroupName>
       <PreprocessorVariable>var.TTLib2Dir</PreprocessorVariable>
     </HarvestDirectory>
-
     <HarvestFile Include="$(ProjectDir)\tt_cleanup-$(TTCleanupVer)\tt_cleanup.rb">
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
       <ComponentGroupName>tt_cleanup</ComponentGroupName>
@@ -112,6 +122,26 @@
       <ComponentGroupName>tt_guidetools</ComponentGroupName>
       <PreprocessorVariable>var.TTGuideToolsDir</PreprocessorVariable>
     </HarvestFile>
+
+	<!-- Fredo6 Plugins -->
+	<HarvestDirectory Include="$(ProjectDir)\JointPushPull-$(JointPushPullVer)">
+      <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
+      <ComponentGroupName>JointPushPull</ComponentGroupName>
+      <PreprocessorVariable>var.JointPushPullDir</PreprocessorVariable>
+	  <SuppressRootDirectory>true</SuppressRootDirectory>
+    </HarvestDirectory>
+	<HarvestDirectory Include="$(ProjectDir)\ToolsOnSurface-$(ToolsOnSurfaceVer)">
+      <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
+      <ComponentGroupName>ToolsOnSurface</ComponentGroupName>
+      <PreprocessorVariable>var.ToolsOnSurfaceDir</PreprocessorVariable>
+	  <SuppressRootDirectory>true</SuppressRootDirectory>
+    </HarvestDirectory>
+	<HarvestDirectory Include="$(ProjectDir)\LibFredo6-$(LibFredo6Ver)">
+      <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
+      <ComponentGroupName>LibFredo6</ComponentGroupName>
+      <PreprocessorVariable>var.LibFredo6Dir</PreprocessorVariable>
+	  <SuppressRootDirectory>true</SuppressRootDirectory>
+    </HarvestDirectory>
   </ItemGroup>
 
   <Import Project="$(WixTargetsPath)" />

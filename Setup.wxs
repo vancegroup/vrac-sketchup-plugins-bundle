@@ -45,6 +45,16 @@
 				<ComponentGroupRef Id="TTLib2" />
 			</Feature>
 		</Feature>
+
+		<Feature Id="fredo6" Title="Fredo6 plugins" Description="Plugins by Fredo6." Level="1">
+			<Feature Id="JointPushPull" Title="JointPushPull plugin" Description="&quot;JointPushPull is a script that performs push pull on multiple faces in one operation.&quot;. Version $(var.JointPushPullVer)." Level="1">
+				<ComponentGroupRef Id="JointPushPull" />
+			</Feature>
+			<Feature Id="ToolsOnSurface" Title="ToolsOnSurface plugin" Description="&quot;Tools on Surface is a Suite of Tools drawing on curved surfaces, with lines, various shapes, offset and Freehand / Polyline.&quot; Version $(var.ToolsOnSurfaceVer), includes LibFredo6 version $(var.LibFredo6Ver)." Level="1">
+				<ComponentGroupRef Id="ToolsOnSurface" />
+				<ComponentGroupRef Id="LibFredo6" />
+			</Feature>
+		</Feature>
         <!--
             Using the Wix UI library.
         -->
