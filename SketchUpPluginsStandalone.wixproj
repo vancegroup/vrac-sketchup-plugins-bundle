@@ -144,6 +144,16 @@
     </HarvestDirectory>
   </ItemGroup>
 
+  <Target Name="HarvestSketchUpPlugin">
+	<CreateProperty Value="$(DefineConstants);$(PluginName)Dir=$(PluginName)-$(PluginVersion);$(PluginName)Ver=$(PluginVersion)">
+		<Output
+			TaskParameter="Value"
+			PropertyName="DefineConstants"
+			/>
+	</CreateProperty>
+
+  </Target>
+
   <Import Project="$(WixTargetsPath)" />
 
 </Project>
