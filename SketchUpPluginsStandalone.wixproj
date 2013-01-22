@@ -48,7 +48,7 @@
 
 	<JointPushPullVer>2.0b</JointPushPullVer>
 	<ToolsOnSurfaceVer>1.8a</ToolsOnSurfaceVer>
-	<LibFredo6Ver>4.3c</LibFredo6Ver>
+	<LibFredo6Ver>4.7a</LibFredo6Ver>
 
 	<DefineConstants>
 		ProductVersion=$(ProductVersion);
