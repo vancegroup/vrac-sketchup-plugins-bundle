@@ -31,7 +31,7 @@
   <!-- User-defined properties, etc. -->
   <PropertyGroup>
     <!-- Setting the version of this installer -->
-    <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.1.0.0</ProductVersion>
+    <ProductVersion Condition=" '$(ProductVersion)' == '' ">1.2.0.0</ProductVersion>
 
 	<LicenseFile>license.rtf</LicenseFile>
 	<WixVariables>WixUILicenseRtf=$(LicenseFile)</WixVariables>
