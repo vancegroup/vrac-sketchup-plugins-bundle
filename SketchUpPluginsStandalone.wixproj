@@ -50,6 +50,8 @@
 	<ToolsOnSurfaceVer>1.8a</ToolsOnSurfaceVer>
 	<LibFredo6Ver>4.7a</LibFredo6Ver>
 
+	<SketchUpSTLVer>1.0.0</SketchUpSTLVer>
+
 	<DefineConstants>
 		ProductVersion=$(ProductVersion);
 		TTLib2Dir=$(TTLib2Dir);
@@ -73,6 +75,9 @@
 		ToolsOnSurfaceDir=ToolsOnSurface-$(ToolsOnSurfaceVer);
 		LibFredo6Ver=$(LibFredo6Ver);
 		LibFredo6Dir=LibFredo6-$(LibFredo6Ver);
+
+		SketchUpSTLVer=$(SketchUpSTLVer);
+		SketchUpSTLDir=SketchUp-STL-$(SketchUpSTLVer);
 	</DefineConstants>
   </PropertyGroup>
 
@@ -140,6 +145,14 @@
       <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
       <ComponentGroupName>LibFredo6</ComponentGroupName>
       <PreprocessorVariable>var.LibFredo6Dir</PreprocessorVariable>
+	  <SuppressRootDirectory>true</SuppressRootDirectory>
+    </HarvestDirectory>
+
+	<!-- SketchUp-STL -->
+	<HarvestDirectory Include="$(ProjectDir)\SketchUp-STL-$(SketchUpSTLVer)">
+      <DirectoryRefId>SKETCHUPPLUGINDIR</DirectoryRefId>
+      <ComponentGroupName>SketchUpSTL</ComponentGroupName>
+      <PreprocessorVariable>var.SketchUpSTLDir</PreprocessorVariable>
 	  <SuppressRootDirectory>true</SuppressRootDirectory>
     </HarvestDirectory>
   </ItemGroup>

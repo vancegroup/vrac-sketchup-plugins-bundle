@@ -55,6 +55,9 @@
 				<ComponentGroupRef Id="LibFredo6" />
 			</Feature>
 		</Feature>
+		<Feature Id="SketchUpSTL" Title="SketchUp-STL import/export plugin" Description="&quot;SketchUp-STL combines import and export support for 3D models in STL (STereoLithography) format, often used for 3D printing.&quot;. Version $(var.SketchUpSTLVer)." Level="1">
+			<ComponentGroupRef Id="SketchUpSTL" />
+		</Feature>
         <!--
             Using the Wix UI library.
         -->
