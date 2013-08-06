@@ -2,7 +2,7 @@
 
 Just an installer bundling some useful plugins from the Sketchucation forums in an MSI installer.
 
-** Note: Mostly disabled right now due to thomthom plugins inclusion considered "unauthorized redistribution", pending an alternate, mutually-acceptable solution **
+**Note: Mostly disabled right now due to thomthom plugins inclusion considered "unauthorized redistribution", pending an alternate, mutually-acceptable solution**
 
 ## Included Plugins
 
